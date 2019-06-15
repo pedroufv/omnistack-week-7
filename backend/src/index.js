@@ -12,7 +12,7 @@ mongoose.connect('mongodb+srv://root:root@cluster0-carkv.mongodb.net/test?retryW
     useNewUrlParser: true,
 });
 
-app.use((req, res) => {
+app.use((req, res, next) => {
     req.io = io;
     
     next();
